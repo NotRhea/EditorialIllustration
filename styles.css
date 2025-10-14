@@ -13,6 +13,7 @@
     --slide-ms: 380ms;   
   }
   
+  .layout { padding-top: -500px;}
   * { box-sizing: border-box; }
   body { margin:0; padding:0; background:#ffffff; color:#000000; }
   .header { font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 1.5em; line-height: 70px; }
@@ -25,10 +26,16 @@
     height: var(--machine-h);
     margin: 24px auto;
     user-select: none;
+    background-image: var(--machine-bg, url(assets/slot_bg.png));
+    background-size: var(--machine-bg-size, contain);
+    background-position: var(--machine-bg-pos, center);
+    background-repeat: no-repeat;
   }
   
+  .slot_bg.png{width: 10%;}
 
   .machine {
+    cursor: pointer;
     border-radius: 50; 
     position: absolute;
     inset: 0;
@@ -131,6 +138,7 @@
     justify-content: flex-start; 
     gap: 16px;                  
     padding: 80px;
+
   }
   
 
@@ -139,12 +147,13 @@
     max-width: 600px;
     line-height: 1.6;
     font-size: 16px;
-    padding-right: -200px; 
+
+        transform: translateY(-110px); 
   }
   
 
   .slot-figure {
-    transform: translateY(-158px) translateX(-85px);
+    transform: translateY(-270px) translateX(-85px);
     width:  calc(var(--machine-w) * var(--ill-scale));
     height: calc(var(--machine-h) * var(--ill-scale));
     overflow: visible; 
@@ -175,4 +184,5 @@
       transform: none; 
     }
   }
+  
   
